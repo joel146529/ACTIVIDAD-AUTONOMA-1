@@ -12,6 +12,11 @@ public class MenuTransporte {
 
         Scanner scanner = new Scanner(System.in);
         int opcion;
+        int edad;
+        int precio=100;
+
+
+
 
         do {
             System.out.println("=== MENU ===");
@@ -25,6 +30,19 @@ public class MenuTransporte {
             switch (opcion) {
                 case 1:
                     System.out.println("Opción 1 seleccionada");
+                    
+                    System.out.print("Ingresa tu edad: ");
+                     edad = scanner.nextInt();
+
+                    double precioFinal = precio;
+                     if (edad < 18) {
+                    precioFinal = precio * 0.5; // 50%
+                     } else if (edad >= 65) {
+                     precioFinal = precio * 0.75; // 75%
+                      }
+
+        System.out.println("El precio del boleto es: $" + precioFinal);
+                        
                     break;
 
                 case 2:
