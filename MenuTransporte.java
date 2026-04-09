@@ -50,15 +50,15 @@ public class MenuTransporte {
                     
                     String inputKm = JOptionPane.showInputDialog("Ingresa la cantidad de kilómetros:");
                     double km = Double.parseDouble(inputKm);
-                    double precio;
+                    double precio2;
                     
 
                     if (km <= 100) {
-                        precio = km * 5;
+                        precio2 = km * 5;
                     } else if (km <= 200) {
-                        precio = km * 7.5;
+                        precio2 = km * 7.5;
                     } else {
-                        precio = km * 10;
+                        precio2 = km * 10;
                     }
 
                     JOptionPane.showMessageDialog(null,
