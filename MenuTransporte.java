@@ -3,9 +3,11 @@
 
 //2.Calcular el valor del transporte terrestre por km 
 //(<= 100 $5 , <=200 $7.50 , >= 200 $10)
-import java.util.Scanner;
+import java.util.*;
+import javax.swing.JOptionPane;
 
 public class MenuTransporte {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -27,6 +29,23 @@ public class MenuTransporte {
 
                 case 2:
                     System.out.println("Opción 2 seleccionada");
+                    
+                    String inputKm = JOptionPane.showInputDialog("Ingresa la cantidad de kilómetros:");
+                    double km = Double.parseDouble(inputKm);
+                    double precio;
+                    
+
+                    if (km <= 100) {
+                        precio = km * 5;
+                    } else if (km <= 200) {
+                        precio = km * 7.5;
+                    } else {
+                        precio = km * 10;
+                    }
+
+                    JOptionPane.showMessageDialog(null,
+                            "Kilómetros: " + km
+                            + "\nPrecio total: $" + precio);
                     break;
 
                 case 0:
