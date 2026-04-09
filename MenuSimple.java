@@ -14,6 +14,7 @@ public class MenuSimple {
             // Mostrar menú
             System.out.println("=== MENU ===");
             System.out.println("1. Convertir Celsius a Fahrenheit");
+            System.out.println("2. Calcular precio + IVA");
             System.out.println("0. Salir");
             System.out.print("Elige una opción: ");
 
@@ -27,9 +28,23 @@ public class MenuSimple {
                     double fahrenheit = (celsius * 9 / 5) + 32;
                     System.out.println(celsius + "°C son " + fahrenheit + "°F");
                     break;
+
+                case 2:
+                    System.out.print("Ingresa el precio del producto: ");
+                    double precio = scanner.nextDouble();
+
+                    double iva = precio * 0.19;
+                    double total = precio + iva;
+
+                    System.out.println("Precio original: " + precio);
+                    System.out.println("IVA (19%): " + iva);
+                    System.out.println("Precio total: " + total);
+                    break;
+
                 case 0:
                     System.out.println("Saliendo del programa...");
                     break;
+
                 default:
                     System.out.println("Opción inválida. Intenta de nuevo.");
             }
